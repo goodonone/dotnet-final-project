@@ -1,9 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace backend_api.Models;
 
 public class User {
-    // public int CoffeeId { get; set; }
+    
+    [JsonIgnore]
+    public int Id { get; set; }
 
     [Required]
     public string? FirstName { get; set; }
@@ -27,6 +30,8 @@ public class User {
 
     [Required, Range(1000, 99999, ErrorMessage = "Please enter a valid ZipCode")]
     public int ZipCode { get; set; }
+
+    public string MemberSince => DateTime.Now.ToString("dd MMMM yyyy");
 
 } 
 
