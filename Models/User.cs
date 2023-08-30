@@ -6,7 +6,7 @@ namespace backend_api.Models;
 public class User {
     
     [JsonIgnore]
-    public int Id { get; set; }
+    public int UserId { get; set; }
 
     [Required]
     public string? FirstName { get; set; }
@@ -32,6 +32,8 @@ public class User {
     public int ZipCode { get; set; }
 
     public string MemberSince => DateTime.Now.ToString("dd MMMM yyyy");
+
+    // public virtual ICollection<Post> Posts { get; set; }
 
 } 
 
