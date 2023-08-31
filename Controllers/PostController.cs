@@ -1,7 +1,5 @@
 using backend_api.Models;
 using backend_api.Repositories;
-
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_api.Controllers
@@ -50,7 +48,6 @@ namespace backend_api.Controllers
         }
 
         [HttpPost]
-   
         public ActionResult<Post> CreatePost(Post post) 
         {
             if (!ModelState.IsValid || post == null) {
