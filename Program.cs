@@ -15,6 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPostRepository, PostRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddSqlite<PostDbContext>("Data Source=SqlDatabase.db");
 
 var app = builder.Build();
