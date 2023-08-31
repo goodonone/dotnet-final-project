@@ -38,7 +38,9 @@ public class User {
 
     // [ForeignKey("PostId")]
 
-    public ICollection<Post> Posts { get; set; }
+    public List<Post> Posts { get; } = new();
+
+    // public List<Tag> Tags { get; } = new();
     // public Post post { get; set;}
 
     // public virtual ICollection<Post> Posts { get; set; }

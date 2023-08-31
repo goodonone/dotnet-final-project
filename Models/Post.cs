@@ -14,8 +14,11 @@ public class Post
 
     public string ChirpDate = DateTime.Now.ToString("dd MMMM yyyy");
 
-    public int UserId { get; set; }
-    public User User { get; set; }
+     public List<User> Users { get; } = new();
+    public int UserId { get; internal set; }
+
+    // public int UserId { get; set; }
+    // public User User { get; set; }
 
     // public virtual ICollection<User> Users { get; set; }
 

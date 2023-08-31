@@ -1,6 +1,6 @@
 using backend_api.Models;
 using backend_api.Repositories;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +26,19 @@ namespace backend_api.Controllers
         }
 
         [HttpGet]
+        [Route("{userId:int}")]
+        public ActionResult<IEnumerable<Post>> GetPostsByUserId(int userId) 
+        {
+
+            return Ok(_postRepository.GetAllPostsByUserId(userId));
+            // var post = _postRepository.GetAllPostsByUserId(userId);
+            // if (post == null) {
+            //     return NotFound();
+            // }
+            // return Ok(post);
+        }
+
+        [HttpGet]
         [Route("{postId:int}")]
         public ActionResult<Post> GetPostById(int postId) 
         {
@@ -37,7 +50,7 @@ namespace backend_api.Controllers
         }
 
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+   
         public ActionResult<Post> CreatePost(Post post) 
         {
             if (!ModelState.IsValid || post == null) {
@@ -49,8 +62,7 @@ namespace backend_api.Controllers
 
         [HttpPut]
         [Route("{postId: int}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public ActionResult<Post> EditPost(Post post) 
+            public ActionResult<Post> EditPost(Post post) 
         {
             if (!ModelState.IsValid || post == null) {
                 return BadRequest();
@@ -60,7 +72,7 @@ namespace backend_api.Controllers
 
         [HttpDelete]
         [Route("{postId: int}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        
         public ActionResult DeletePost(int postId) 
         {
             _postRepository.DeletePostById(postId); 

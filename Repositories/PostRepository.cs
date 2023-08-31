@@ -1,9 +1,10 @@
+using System.Linq;
 using backend_api.Migrations;
 using backend_api.Models;
 
 namespace backend_api.Repositories;
 
-public class PostRepository : IPostRepository 
+public class PostRepository : IPostRepository
 {
     private readonly PostDbContext _context;
 
@@ -12,7 +13,7 @@ public class PostRepository : IPostRepository
         _context = context;
     }
 
-      public IEnumerable<Post> GetAllPosts()
+    public IEnumerable<Post> GetAllPosts()
     {
         return _context.Posts.ToList();
     }
@@ -32,10 +33,17 @@ public class PostRepository : IPostRepository
     }
 
 
-public Post? UpdatePost(Post newPost)
+    public IEnumerable<Post>GetAllPostsByUserId(int userId)
+    {
+        return _context.Posts.Where(p => p.UserId == userId);
+    }
+
+
+    public Post? UpdatePost(Post newPost)
     {
         var originalPost = _context.Posts.Find(newPost.PostId);
-        if (originalPost != null) {
+        if (originalPost != null)
+        {
             originalPost.Chirp = newPost.Chirp;
             originalPost.ChirpDate = newPost.ChirpDate = DateTime.Now.ToString("dd MMMM yyyy");
             _context.SaveChanges();
@@ -47,13 +55,18 @@ public Post? UpdatePost(Post newPost)
     public void DeletePostById(int PostId)
     {
         var post = _context.Posts.Find(PostId);
-        if (post != null) {
-            _context.Posts.Remove(post); 
-            _context.SaveChanges(); 
+        if (post != null)
+        {
+            _context.Posts.Remove(post);
+            _context.SaveChanges();
         }
     }
 
+    public IEnumerable<Post> GetAllPostsById()
+    {
+        throw new NotImplementedException();
+    }
 }
- 
-    
+
+
 
