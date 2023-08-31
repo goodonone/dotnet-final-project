@@ -1,6 +1,11 @@
 using backend_api.Migrations;
+using backend_api.Repositories;
+// using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
+// var connectionString = builder.Configuration.GetConnectionString("IdentityDataContextConnection") ?? throw new InvalidOperationException("Connection string 'IdentityDataContextConnection' not found.");
 
 // Add services to the container.
 
@@ -9,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddSqlite<PostDbContext>("Data Source=SqlDatabase.db");
 
 var app = builder.Build();
