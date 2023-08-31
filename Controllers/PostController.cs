@@ -27,7 +27,7 @@ namespace backend_api.Controllers
 
         [HttpGet]
         [Route("{postId:int}")]
-        public ActionResult<Post> GetPost(int postId) 
+        public ActionResult<Post> GetPostById(int postId) 
         {
             var post = _postRepository.GetPostById(postId);
             if (post == null) {
