@@ -32,12 +32,11 @@ public PostDbContext(DbContextOptions<PostDbContext> options)
         // entity.Property(e => e.PostId).ValueGeneratedOnAdd();
         entity.Property(e => e.Chirp).IsRequired();
         entity.Property(e => e.ChirpDate).ValueGeneratedOnAdd();
-        entity.Property(e => e.UserId).ValueGeneratedOnAdd();
     });
 
 modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId);
+        entity.HasKey(e => e.UserId);
         entity.Property(e => e.FirstName).IsRequired();
         entity.Property(e => e.LastName).IsRequired();
         entity.HasIndex(e => e.UserName).IsUnique();
@@ -47,6 +46,7 @@ modelBuilder.Entity<User>(entity =>
         entity.Property(e => e.ZipCode).IsRequired();
         entity.Property(e => e.MemberSince).ValueGeneratedOnAdd();
         entity.Property(e => e.Password).IsRequired();
+        entity.Property(e => e.PhotoURL);
         });
 
 }

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-
 namespace backend_api.Models;
 
 public class User {
@@ -31,7 +31,15 @@ public class User {
     [Required, Range(1000, 99999, ErrorMessage = "Please enter a valid ZipCode")]
     public int ZipCode { get; set; }
 
-    public string MemberSince => DateTime.Now.ToString("dd MMMM yyyy");
+    public string MemberSince = DateTime.Now.ToString("dd MMMM yyyy");
+
+    public string? PhotoURL { get; set; }
+
+
+    // [ForeignKey("PostId")]
+
+    public ICollection<Post> Posts { get; set; }
+    // public Post post { get; set;}
 
     // public virtual ICollection<Post> Posts { get; set; }
 

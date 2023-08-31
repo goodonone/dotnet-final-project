@@ -12,14 +12,10 @@ public class Post
     [Required]
     public string? Chirp { get; set; }
 
-    public string ChirpDate => DateTime.Now.ToString("dd MMMM yyyy");
+    public string ChirpDate = DateTime.Now.ToString("dd MMMM yyyy");
 
-    public int UserId {get; set;}
-    
-
-    [ForeignKey("UserId")]
-
-    public User user { get; set;}
+    public int UserId { get; set; }
+    public User User { get; set; }
 
     // public virtual ICollection<User> Users { get; set; }
 
