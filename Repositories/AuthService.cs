@@ -53,6 +53,26 @@ public class AuthService : IAuthService
         }
     }
 
+
+    // public string SignIn(SignInRequest request)
+    // {
+    //     var user = _context.Users.SingleOrDefault(x => x.UserName == UserName);
+    //     var verified = false;
+
+    //     if (user != null)
+    //     {
+    //         verified = bcrypt.Verify(request.Password, user.Password);
+    //     }
+
+    //     if (user == null || !verified)
+    //     {
+    //         return String.Empty;
+    //     }
+
+    //     return BuildToken(user);
+    // }
+
+
     private string BuildToken(User user)
     {
         var secret = _config.GetValue<String>("TokenSecret");
@@ -68,6 +88,10 @@ public class AuthService : IAuthService
         new Claim(JwtRegisteredClaimNames.Email, user.Email ?? ""),
         new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName ?? ""),
         new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName ?? ""),
+        new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName ?? ""),
+        new Claim(ClaimTypes.PostalCode, user.ZipCode.ToString()),
+        new Claim(ClaimTypes.StateOrProvince, user.State ?? ""),
+        new Claim(JwtRegisteredClaimNames.Nonce, user.City ?? ""),
         };
 
         // Create token
