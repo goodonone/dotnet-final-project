@@ -54,25 +54,6 @@ public class AuthService : IAuthService
     }
 
 
-    // public string SignIn(SignInRequest request)
-    // {
-    //     var user = _context.Users.SingleOrDefault(x => x.UserName == UserName);
-    //     var verified = false;
-
-    //     if (user != null)
-    //     {
-    //         verified = bcrypt.Verify(request.Password, user.Password);
-    //     }
-
-    //     if (user == null || !verified)
-    //     {
-    //         return String.Empty;
-    //     }
-
-    //     return BuildToken(user);
-    // }
-
-
     private string BuildToken(User user)
     {
         var secret = _config.GetValue<String>("TokenSecret");

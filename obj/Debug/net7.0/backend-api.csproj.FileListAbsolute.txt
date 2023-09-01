@@ -266,3 +266,9 @@
 /Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
 /Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/BCrypt.Net-Next.dll
+/Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

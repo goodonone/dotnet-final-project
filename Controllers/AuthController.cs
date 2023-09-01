@@ -1,6 +1,7 @@
 using backend_api.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using backend_api.Models;
+// using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace backend_api.Controllers;
 
@@ -17,7 +18,7 @@ public class AuthController : ControllerBase
         _authService = service;
     }
     [HttpPost]
-    [Route("auth/register")]
+    [Route("register")]
     public ActionResult CreateUser(User user)
     {
         if (user == null || !ModelState.IsValid)
@@ -28,8 +29,8 @@ public class AuthController : ControllerBase
         return NoContent();
     }
 
-    [HttpPost]
-    [Route("auth/signin")]
+    [HttpGet]
+    [Route("login")]
     public ActionResult<string> SignIn(string userName, string password)
     {
         if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password))
