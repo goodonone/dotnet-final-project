@@ -32,6 +32,12 @@ public class AuthService : IAuthService
         return user;
     }
 
+    public User GetUserByUserId(int userId)
+    {
+    var user = _context.Users.SingleOrDefault(x => x.UserId == userId);
+    return user;
+    }
+
     public string SignIn(string UserName, string password)
     {
         {
@@ -87,4 +93,8 @@ public class AuthService : IAuthService
         return encodedJwt;
     }
 
+    void IAuthService.GetUserByUserId(int userId)
+    {
+        throw new NotImplementedException();
+    }
 }

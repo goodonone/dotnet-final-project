@@ -26,7 +26,7 @@ namespace backend_api.Controllers
         }
 
         [HttpGet]
-        [Route("{userId:int}")]
+        [Route("{userId:int}/posts")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public ActionResult<IEnumerable<Post>> GetPostsByUserId(int userId) 
         {

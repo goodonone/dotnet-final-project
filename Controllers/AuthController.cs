@@ -30,6 +30,18 @@ public class AuthController : ControllerBase
     }
 
     [HttpGet]
+    [Route("user")]
+    public ActionResult GetUser(int userId)
+    {
+        if (userId == null || !ModelState.IsValid)
+        {
+            return BadRequest();
+        }
+        _authService.GetUserByUserId(userId);
+        return NoContent();
+    }
+
+    [HttpGet]
     [Route("login")]
     public ActionResult<string> SignIn(string userName, string password)
     {

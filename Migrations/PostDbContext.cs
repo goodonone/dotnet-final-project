@@ -50,5 +50,10 @@ public class PostDbContext : DbContext
                 });
 
     }
+
+    internal void Find(User user)
+    {
+        throw new NotImplementedException();
+    }
 }
 
