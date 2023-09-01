@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5oGV632F8kH7z9QZe4PACbRA7zJ1oRY2duGCcxKz65gF1S9PbTb62ELtGy4+Qvmc9OOTtqDZyurviCfJ6WQuvQ==",
+  "dgSpecHash": "Obkcrv/OlBqO4bPRkbXMJmaMCq4Gwr7bd7BFZPyCofQcy5xD7RZp7eb/n4DYbJtVe1lo4x+UgjtTtfe81P8s1Q==",
   "success": true,
   "projectFilePath": "/Users/judeprashanth/Desktop/backend-dotnet/final-project/backend-api/backend-api.csproj",
   "expectedPackageFiles": [
@@ -55,6 +55,7 @@
     "/Users/judeprashanth/.nuget/packages/humanizer.core.zh-cn/2.14.1/humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/humanizer.core.zh-hans/2.14.1/humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/humanizer.core.zh-hant/2.14.1/humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "/Users/judeprashanth/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/7.0.10/microsoft.aspnetcore.authentication.jwtbearer.7.0.10.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.10/microsoft.aspnetcore.cryptography.internal.7.0.10.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.10/microsoft.aspnetcore.cryptography.keyderivation.7.0.10.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/7.0.10/microsoft.aspnetcore.identity.entityframeworkcore.7.0.10.nupkg.sha512",
@@ -105,6 +106,8 @@
     "/Users/judeprashanth/.nuget/packages/microsoft.identitymodel.abstractions/6.32.2/microsoft.identitymodel.abstractions.6.32.2.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.32.2/microsoft.identitymodel.jsonwebtokens.6.32.2.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.identitymodel.logging/6.32.2/microsoft.identitymodel.logging.6.32.2.nupkg.sha512",
+    "/Users/judeprashanth/.nuget/packages/microsoft.identitymodel.protocols/6.15.1/microsoft.identitymodel.protocols.6.15.1.nupkg.sha512",
+    "/Users/judeprashanth/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.15.1/microsoft.identitymodel.protocols.openidconnect.6.15.1.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.identitymodel.tokens/6.32.2/microsoft.identitymodel.tokens.6.32.2.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.net.stringtools/17.3.2/microsoft.net.stringtools.17.3.2.nupkg.sha512",
     "/Users/judeprashanth/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",

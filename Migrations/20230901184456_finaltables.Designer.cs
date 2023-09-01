@@ -11,8 +11,8 @@ using backend_api.Migrations;
 namespace backend_api.Migrations
 {
     [DbContext(typeof(PostDbContext))]
-    [Migration("20230901040810_last")]
-    partial class last
+    [Migration("20230901184456_finaltables")]
+    partial class finaltables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

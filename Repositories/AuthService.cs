@@ -72,7 +72,7 @@ public class AuthService : IAuthService
         new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName ?? ""),
         new Claim(ClaimTypes.PostalCode, user.ZipCode.ToString()),
         new Claim(ClaimTypes.StateOrProvince, user.State ?? ""),
-        new Claim(JwtRegisteredClaimNames.Nonce, user.City ?? ""),
+        new Claim(JwtRegisteredClaimNames.Sub, user.City ?? ""),
         };
 
         // Create token

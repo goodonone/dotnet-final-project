@@ -6,7 +6,7 @@ using backend_api.Models;
 namespace backend_api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/")]
 public class AuthController : ControllerBase
 {
     private readonly ILogger<AuthController> _logger;

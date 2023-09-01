@@ -1,5 +1,7 @@
 using backend_api.Models;
 using backend_api.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_api.Controllers
@@ -25,6 +27,7 @@ namespace backend_api.Controllers
 
         [HttpGet]
         [Route("{userId:int}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public ActionResult<IEnumerable<Post>> GetPostsByUserId(int userId) 
         {
 
@@ -38,6 +41,7 @@ namespace backend_api.Controllers
 
         [HttpGet]
         [Route("{PostId:int}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public ActionResult<Post> GetPostById(int postId) 
         {
             var post = _postRepository.GetPostById(postId);
@@ -48,6 +52,7 @@ namespace backend_api.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public ActionResult<Post> CreatePost(Post post) 
         {
             if (!ModelState.IsValid || post == null) {
@@ -59,6 +64,7 @@ namespace backend_api.Controllers
 
         [HttpPut]
         [Route("{PostId:int}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
             public ActionResult<Post> EditPost(Post post) 
         {
             if (!ModelState.IsValid || post == null) {

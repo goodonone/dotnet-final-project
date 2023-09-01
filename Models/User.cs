@@ -47,7 +47,6 @@ public class User {
 
     // public virtual ICollection<Post> Posts { get; set; }
 
-} 
-
+}
 
 
