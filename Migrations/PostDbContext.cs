@@ -30,7 +30,7 @@ public class PostDbContext : DbContext
         {
             entity.HasKey(e => e.PostId);
             // entity.Property(e => e.PostId).ValueGeneratedOnAdd();
-            entity.Property(e => e.Chirp).IsRequired();
+            entity.Property(e => e.Chirp);
             entity.Property(e => e.ChirpDate).ValueGeneratedOnAdd();
         });
 
@@ -49,11 +49,6 @@ public class PostDbContext : DbContext
                     entity.Property(e => e.PhotoURL);
                 });
 
-    }
-
-    internal void Find(User user)
-    {
-        throw new NotImplementedException();
     }
 }
 
