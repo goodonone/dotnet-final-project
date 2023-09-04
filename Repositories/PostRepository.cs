@@ -62,11 +62,6 @@ public class PostRepository : IPostRepository
         }
     }
 
-    public IEnumerable<Post> GetAllPostsById()
-    {
-        throw new NotImplementedException();
-    }
-
 
 }
 

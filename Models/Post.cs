@@ -15,13 +15,6 @@ public class Post
     public int UserId { get; set; }
     public User? User { get; set; }
 
-    // public List<User> Users { get; } = new();
-    
-    // public int UserId { get; internal set; }
 
-    // public int UserId { get; set; }
-    // public User User { get; set; }
-
-    // public virtual ICollection<User> Users { get; set; }
 
 }

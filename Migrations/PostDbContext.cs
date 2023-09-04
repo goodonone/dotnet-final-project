@@ -15,21 +15,11 @@ public class PostDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        // modelBuilder.Entity<User>().ToTable("Users");
-        // modelBuilder.Entity<Post>().ToTable("Posts");
-
-        // modelBuilder.Entity<User>()
-        //    .HasMany(u => u.Posts).Map(m =>
-        //         {
-        //             m.ToTable("aspnet_Users-Posts");
-        //             m.MapLeftKey("UserId");
-        //             m.MapRightKey("PostId");
-        //         });
+      
 
         modelBuilder.Entity<Post>(entity =>
         {
             entity.HasKey(e => e.PostId);
-            // entity.Property(e => e.PostId).ValueGeneratedOnAdd();
             entity.Property(e => e.Chirp);
             entity.Property(e => e.ChirpDate).ValueGeneratedOnAdd();
         });
