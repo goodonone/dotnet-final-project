@@ -1,7 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
-
 namespace backend_api.Models;
 
 public class Post
@@ -14,7 +10,5 @@ public class Post
 
     public int UserId { get; set; }
     public User? User { get; set; }
-
-
 
 }

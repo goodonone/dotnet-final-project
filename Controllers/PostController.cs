@@ -33,11 +33,7 @@ public class PostController : ControllerBase
     {
 
         return Ok(_postRepository.GetAllPostsByUserId(userId));
-        // var post = _postRepository.GetAllPostsByUserId(userId);
-        // if (post == null) {
-        //     return NotFound();
-        // }
-        // return Ok(post);
+
     }
 
     [HttpGet]
